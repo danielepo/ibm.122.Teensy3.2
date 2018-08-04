@@ -32,8 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DESCRIPTION "TMK keyboard firmware over ChibiOS"
 
 /* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 17
+#define MATRIX_ROWS 8
+#define MATRIX_COLS 20
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
