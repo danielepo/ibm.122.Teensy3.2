@@ -221,11 +221,11 @@ static void select_row(uint8_t row) {
   // Output low to select
   switch (row) {
     case 0:
-      selectRow(KB_ROW_01);
+      selectRow(KB_ROW_02);
       break;
 
     case 1:
-      selectRow(KB_ROW_02);
+      selectRow(KB_ROW_01);
       break;
 
     case 2:

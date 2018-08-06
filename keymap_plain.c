@@ -29,27 +29,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #define KEYMAP( \
-                   K709,K609,K60A,K509,K409,K40A,K309,K209,K20A,K009,K109,K10A,\
-                   K70A,K70B,K60B,K50A,K50B,K40B,K30A,K30B,K20B,K00A,K00B,K10B,\
-  K401,K402 , K404,K504,K505,K506,K507,K407,K408,K508,K50C,K50D,K50E,K40E,K40C,K40F , K410,K411,K510 , K50F,K511,K512,K500,\
-  K501,K301 , K302,K304,K305,K306,K307,K207,K208,K308,K30C,K30D,K30E,K20F,K20C,K00F , CANC,K210,K310 , K30F,K311,K312,K300,\
-  K201,K202 , K002,K604,K605,K606,K607,K707,K708,K608,K60C,K60D,K60E,K70E,K00E,            K710,       K60F,K611,K612,K600,\
-  K601,K602 , K103,K104,K004,K005,K006,K007,K107,K108,K008,K00C,K00D,K10E,K003,       K000,K713,K613 , K001,K011,K012,K113,\
-  K702,K701 , K700,     K100,               K101,               K703,     K102,            K70F,       K111,          K112\
+                K7J,K6J,K6K,K5J,K4J,K4K,K3J,K2J,K2K,K1J,K0J,K0K,\
+                K7K,K7L,K6L,K5K,K5L,K4L,K3K,K3L,K2L,K1K,K1L,K0L,\
+K4B,K4C , K4E,K5E,K5F,K5G,K5H,K4H,K4I,K5I,K5M,K5N,K5O,K4O,K4M,K4P  ,  K4Q,K4R,K5Q,   K5P  ,K5R,K5S,K5A,\
+K5B,K3B , K3C,K3E,K3F,K3G,K3H,K2H,K2I,K3I,K3M,K3N,K3O,K2O,K2M,K1P,              K6Q,K2P,K3Q,  K3P,K3R,K3S,K3A  ,\
+K2B,K2C , K1C,K6D,K6E,K6F,K6H,K7H,K7I,K6I,K6M,K6N,K6O,K7O,K1O,                   K7Q,          K6P,K6R,K6S,K6A,\
+K6B,K6C , K0D,K0E,Z,K1F,K1G,K1H,K0H,K0I,K1I,K1M,K1N,K0O,K1D,     K1A,K7T,K6T,K1B,K1R,K1S,K0T,\
+K7C,K7B, K7A,   K0A,  K0B,K7D,  K0C,                         K7P,        K0R,     K0S\
 ) { \
-  {KC_##K000,KC_##K001,KC_##K002,KC_##K003,KC_##K004,KC_##K005,KC_##K006,KC_##K007,KC_##K008,KC_##K009,KC_##K00A,KC_##K00B,KC_##K00C,KC_##K00D,KC_##K00E,KC_##K00F,KC_NO    ,KC_##K011,KC_##K012,KC_NO} ,\
-  {KC_##K100,KC_##K101,KC_##K102,KC_##K103,KC_##K104,KC_NO    ,KC_NO    ,KC_##K107,KC_##K108,KC_##K109,KC_##K10A,KC_##K10B,KC_NO    ,KC_NO    ,KC_##K10E,KC_NO    ,KC_NO    ,KC_##K111,KC_##K112,KC_##K113} ,\
-  {KC_NO    ,KC_##K201,KC_##K202,KC_NO    ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K207,KC_##K208,KC_##K209,KC_##K20A,KC_##K20B,KC_##K20C,KC_NO    ,KC_##K20F,KC_NO    ,KC_##K210,KC_NO    ,KC_NO    ,KC_NO} ,\
-  {KC_##K300,KC_##K301,KC_##K302,KC_NO    ,KC_##K304,KC_##K305,KC_##K306,KC_##K307,KC_##K308,KC_##K309,KC_##K30A,KC_##K30B,KC_##K30C,KC_##K30D,KC_##K30E,KC_##K30F,KC_##K310,KC_##K311,KC_##K312,KC_NO} ,\
-  {KC_NO    ,KC_##K401,KC_##K402,KC_NO    ,KC_##K404,KC_NO    ,KC_NO    ,KC_##K407,KC_##K408,KC_##K409,KC_##K40A,KC_##K40B,KC_##K40C,KC_NO    ,KC_##K40E,KC_##K40F,KC_##K410,KC_##K411,KC_NO    ,KC_NO} ,\
-  {KC_##K500,KC_##K501,KC_NO    ,KC_NO    ,KC_##K504,KC_##K505,KC_##K506,KC_##K507,KC_##K508,KC_##K509,KC_##K50A,KC_##K50B,KC_##K50C,KC_##K50D,KC_##K50E,KC_##K50F,KC_##K510,KC_##K511,KC_##K512,KC_NO} ,\
-  {KC_##K600,KC_##K601,KC_##K602,KC_NO    ,KC_##K604,KC_##K605,KC_##K606,KC_##K607,KC_##K608,KC_##K609,KC_##K60A,KC_##K60B,KC_##K60C,KC_##K60D,KC_##K60E,KC_##K60F,KC_NO    ,KC_##K611,KC_##K612,KC_##K613} ,\
-  {KC_##K700,KC_##K701,KC_##K702,KC_##K703,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K707,KC_##K708,KC_##K709,KC_##K70A,KC_##K70B,KC_NO    ,KC_NO    ,KC_##K70E,KC_##K70F,KC_##K710,KC_NO    ,KC_NO    ,KC_##K713}\
-}
-
+{KC_##K0A ,KC_##K0B,KC_##K0C  ,KC_##K0D ,KC_##K0E ,KC_NO    ,KC_NO    ,KC_##K0H,KC_##K0I,KC_##K0J,KC_##K0K,KC_##K0L,KC_NO,KC_NO,KC_##K0O,KC_NO,KC_NO,KC_##K0R  ,KC_##K0S  ,KC_##K0T   },\
+{KC_##K1A ,KC_##K1B,KC_##K1C  ,KC_##K1D ,KC_NO    ,KC_##K1F ,KC_##K1G ,KC_##K1H,KC_##K1I,KC_##K1J,KC_##K1K,KC_##K1L,KC_##K1M  ,KC_##K1N  ,KC_##K1O,KC_##K1P  ,KC_NO,KC_##K1R  ,KC_##K1S  ,KC_NO },\
+{KC_NO    ,KC_##K2B,KC_##K2C  ,KC_NO    ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K2H,KC_##K2I,KC_##K2J,KC_##K2K,KC_##K2L,KC_##K2M  ,KC_NO,KC_##K2O,KC_NO,KC_##K2P  ,KC_NO,KC_NO,KC_NO },\
+{KC_##K3A ,KC_##K3B,KC_##K3C  ,KC_NO    ,KC_##K3E ,KC_##K3F ,KC_##K3G ,KC_##K3H,KC_##K3I,KC_##K3J,KC_##K3K,KC_##K3L,KC_##K3M  ,KC_##K3N  ,KC_##K3O,KC_##K3P  ,KC_##K3Q  ,KC_##K3R  ,KC_##K3S  ,KC_NO },\
+{KC_NO    ,KC_##K4B,KC_##K4C  ,KC_NO    ,KC_##K4E ,KC_NO    ,KC_NO    ,KC_##K4H,KC_##K4I,KC_##K4J,KC_##K4K,KC_##K4L,KC_##K4M  ,KC_NO,KC_##K4O,KC_##K4P  ,KC_##K4Q  ,KC_##K4R  ,KC_NO,KC_NO },\
+{KC_##K5A ,KC_##K5B,KC_NO     ,KC_NO    ,KC_##K5E ,KC_##K5F ,KC_##K5G ,KC_##K5H,KC_##K5I,KC_##K5J,KC_##K5K,KC_##K5L,KC_##K5M  ,KC_##K5N  ,KC_##K5O,KC_##K5P  ,KC_##K5Q  ,KC_##K5R  ,KC_##K5S  ,KC_NO },\
+{KC_##K6A ,KC_##K6B,KC_##K6C  ,KC_##K6D ,KC_##K6E ,KC_##K6F ,KC_NO    ,KC_##K6H,KC_##K6I,KC_##K6J,KC_##K6K,KC_##K6L,KC_##K6M  ,KC_##K6N  ,KC_##K6O,KC_##K6P  ,KC_##K6Q  ,KC_##K6R  ,KC_##K6S  ,KC_##K6T   },\
+{KC_##K7A ,KC_##K7B,KC_##K7C  ,KC_##K7D ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K7H,KC_##K7I,KC_##K7J,KC_##K7K,KC_##K7L,KC_NO,KC_NO,KC_##K7O,KC_##K7P  ,KC_##K7Q  ,KC_NO,KC_NO,KC_##K7T   }\
+},
 
 static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-      KEYMAP( \
+      KEYMAP(
      /* Keymap 0: Default Layer
      * ,---------------------------------------------------------------------------------------------------------------------------------.
      * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                               |
@@ -70,9 +69,9 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ___ , ___    , FN0  ,  A  ,  S  ,  D  ,  F  ,  G  ,  H  ,  J  ,  K  ,  L  , SCLN, QUOT, BSLS,                UP  ,           P4  , P5  , P6  , EQL ,
   ___ , LGUI   , LSFT , BSLS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
   ___ , RGUI   , LCTL ,       LALT,             SPC ,                         RALT,             RCTL  ,         NO ,            P0        ,PDOT
-),
+)
 
- KEYMAP( \
+ KEYMAP(
 //      /* Keymap 0: Default Layer
 //      * ,---------------------------------------------------------------------------------------------------------------------------------.
 //      * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                               |
@@ -93,7 +92,7 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  ___ , ___   ,   FN5 , LALT, ___ , LSFT, LCTL, ___ , ___ , PGDN, LEFT, DOWN, RGHT, BSPC, ___ ,                 ___        ,  ___ , ___ , ___ , ___ ,
  ___ , ___   ,   ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ ,           ___ , ___ , ___  ,  ___ , ___ , ___ , ___ ,
  ___ , ___   ,   ___ ,       ___ ,             ___ ,                         ___ ,       ___ ,                 ___ ,         ___ ,       ___
-),
+)
  };
 
 const action_t  fn_actions[] = {
