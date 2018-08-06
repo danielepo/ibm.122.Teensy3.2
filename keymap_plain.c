@@ -25,22 +25,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "keymap.h"
 
 #define KEYMAP( \
-                        F13,  F14,  F15,  F16,	F17,	F18,	F19,	F20,	F21,	F22,	F23,	F24,\
-                        F1,   F2,   F3,   F4,	  F5,	  F6,	  F7,	  F8,	  F9,	  F10,	F11,	F12,\
-  FS1,  FS6,    BCTIC,  K1,	  K2,   K3,	  K4,	  K5,	  K6,	  K7,	  K8,	  K9,	  K0,	   TIC,	IACC,	BKSP,	    INS,	HOME,	PAGSU,      UPAD7,UPAD8,UPAD9,UPADMINUS,\
-  FS2,  FS7,    TAB,    Q,	  W,	  E,	  R,	  T,	  Y,	  U,	  I,	  O,	  P,	   EACC,	PLUS,	ENT,    CANC,	END,	PAGGIU,	    PAD7,	PAD8,	PAD9,	PADMINUS,\
-  FS3,  FS8,    CAPS,   A,	  S,	  D,	  F,	  G,	  H,	  J,	  K,	  L,	  OACC,	 AACC,	UACC,	              UP,               PAD4,	PAD5,	PAD6,	DXPAD6,\
-  FS4,  FS9,    SHFSX,  LT,	  Z,	  X,	  C,	  V,	  B,	  N,	  M,	  COMA,	DOT,	 MINUS,	SHFDX,	      LEFT,	CENTER,	RIGHT,  	PAD1,	PAD2,	PAD3,	PADPLUS,\
-  FS5,  FS10,   CTRLSX,       ALT,    SPACE,	                                ALTGR,	      CTRLDX,	            DOWN,             PAD0,	            PADDOT\
+                   K709,K609,K60A,K509,K409,K40A,K309,K209,K20A,K009,K109,K10A,\
+                   K70A,K70B,K60B,K50A,K50B,K40B,K30A,K30B,K20B,K00A,K00B,K10B,\
+  K401,K402 , K404,K504,K505,K506,K507,K407,K408,K508,K50C,K50D,K50E,K40E,K40C,K40F , K410,K411,K510 , K50F,K511,K512,K500,\
+  K501,K301 , K302,K304,K305,K306,K307,K207,K208,K308,K30C,K30D,K30E,K20F,K20C,K00F , CANC,K210,K310 , K30F,K311,K312,K300,\
+  K201,K202 , K002,K604,K605,K606,K607,K707,K708,K608,K60C,K60D,K60E,K70E,K00E,            K710,       K60F,K611,K612,K600,\
+  K601,K602 , K103,K104,K004,K005,K006,K007,K107,K108,K008,K00C,K00D,K10E,K003,       K000,K713,K613 , K001,K011,K012,K113,\
+  K702,K701 , K700,     K100,               K101,               K703,     K102,            K70F,       K111,          K112\
 ) { \
-    {LEFT, PAD1, CAPS, SHFDX, Z, X, C, V, M, F22, F10, F11, COMA, DOT, UACC, ENT, KC_NO, PAD2, PAD3, KC_NO} ,\
-    {ALT, SPACE, CTRLDX, SHFSX, LT, KC_NO, KC_NO, B, N, F23, F24, F12, KC_NO, KC_NO, MINUS, KC_NO, KC_NO, PAD0, PADDOT, PADPLUS} ,\
-    {KC_NO, FS3, FS8, KC_NO, KC_NO, KC_NO, KC_NO, T, Y, F20, F21, F9, PLUS, KC_NO, EACC, KC_NO, END, KC_NO, KC_NO, KC_NO} ,\
-    {PADMINUS, FS7, TAB, KC_NO, Q, W, E, R, U, F19, F7, F8, I, O, P, PAD7, PAGGIU, PAD8, PAD9, KC_NO} ,\
-    {KC_NO, FS1, FS6, KC_NO, BCTIC, KC_NO, KC_NO, K5, K6, F17, F18, F6, IACC, KC_NO, TIC, BKSP, INS, HOME, KC_NO, KC_NO} ,\
-    {UPADMINUS, FS2, KC_NO, KC_NO, K1, K2, K3, K4, K7, F16, F4, F5, K8, K9, K0, UPAD7, PAGSU, UPAD8, UPAD9, KC_NO} ,\
-    {DXPAD6, FS4, FS9, KC_NO, A, S, D, F, J, F14, F15, F3, K, L, OACC, PAD4, KC_NO, PAD5, PAD6, RIGHT} ,\
-    {CTRLSX, FS10, FS5, ALTGR, KC_NO, KC_NO, KC_NO, G, H, F13, F1, F2, KC_NO, KC_NO, AACC, DOWN, UP, KC_NO, KC_NO, CENTER}\
+  {KC_##K000,KC_##K001,KC_##K002,KC_##K003,KC_##K004,KC_##K005,KC_##K006,KC_##K007,KC_##K008,KC_##K009,KC_##K00A,KC_##K00B,KC_##K00C,KC_##K00D,KC_##K00E,KC_##K00F,KC_NO    ,KC_##K011,KC_##K012,KC_NO} ,\
+  {KC_##K100,KC_##K101,KC_##K102,KC_##K103,KC_##K104,KC_NO    ,KC_NO    ,KC_##K107,KC_##K108,KC_##K109,KC_##K10A,KC_##K10B,KC_NO    ,KC_NO    ,KC_##K10E,KC_NO    ,KC_NO    ,KC_##K111,KC_##K112,KC_##K113} ,\
+  {KC_NO    ,KC_##K201,KC_##K202,KC_NO    ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K207,KC_##K208,KC_##K209,KC_##K20A,KC_##K20B,KC_##K20C,KC_NO    ,KC_##K20F,KC_NO    ,KC_##K210,KC_NO    ,KC_NO    ,KC_NO} ,\
+  {KC_##K300,KC_##K301,KC_##K302,KC_NO    ,KC_##K304,KC_##K305,KC_##K306,KC_##K307,KC_##K308,KC_##K309,KC_##K30A,KC_##K30B,KC_##K30C,KC_##K30D,KC_##K30E,KC_##K30F,KC_##K310,KC_##K311,KC_##K312,KC_NO} ,\
+  {KC_NO    ,KC_##K401,KC_##K402,KC_NO    ,KC_##K404,KC_NO    ,KC_NO    ,KC_##K407,KC_##K408,KC_##K409,KC_##K40A,KC_##K40B,KC_##K40C,KC_NO    ,KC_##K40E,KC_##K40F,KC_##K410,KC_##K411,KC_NO    ,KC_NO} ,\
+  {KC_##K500,KC_##K501,KC_NO    ,KC_NO    ,KC_##K504,KC_##K505,KC_##K506,KC_##K507,KC_##K508,KC_##K509,KC_##K50A,KC_##K50B,KC_##K50C,KC_##K50D,KC_##K50E,KC_##K50F,KC_##K510,KC_##K511,KC_##K512,KC_NO} ,\
+  {KC_##K600,KC_##K601,KC_##K602,KC_NO    ,KC_##K604,KC_##K605,KC_##K606,KC_##K607,KC_##K608,KC_##K609,KC_##K60A,KC_##K60B,KC_##K60C,KC_##K60D,KC_##K60E,KC_##K60F,KC_NO    ,KC_##K611,KC_##K612,KC_##K613} ,\
+  {KC_##K700,KC_##K701,KC_##K702,KC_##K703,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K707,KC_##K708,KC_##K709,KC_##K70A,KC_##K70B,KC_NO    ,KC_NO    ,KC_##K70E,KC_##K70F,KC_##K710,KC_NO    ,KC_NO    ,KC_##K713}\
 }
 
 #define _______ KC_TRNS
@@ -48,66 +48,36 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KEYMAP( \
 //      /* Keymap 0: Default Layer
-//      * ,-----------------------------------------------------------------------------------------------------------------------------.
-//      * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                           |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |                 |  F1 |  F2 |  F3 |  F4 |  F5|  F6|  F7|  F8|  F9| F10| F11| F12|                                           |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |Copy|Pste|     ` |  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|    Bspc|    INS|  HOME|  PGUP|    NLCK| PSLS| PAST| PMNS| |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |Cut |Caps|    Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|      |    DEL|   END|  PGDN|     P7|   P8|   P9| |PPLS| |
-//      * |--------------------------------------------------------------------       --------------------------------------------------|
-//      * |BT< |BT>+|    FN1  |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '| \ |Enter |	      |   UP |            P4|   P5|   P6| |  = | |
-//      * |---------------------------------------------------------------------------------------------------------------------------- |
-//      * |MC1 |App |    Shift|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /| *   Shift|   LEFT| DOWN | RIGHT|     P1|   P2|   P3| |PENT| |
-//      * |----------------------------------------------------------------------------------------------------------------------|    | |
-//      * |Esc |GUI |    Ctrl|    |Alt |            Space          |Alt |     |Ctrl  |       |   FN |           | *    P0| PDOT| |  * | |
-//      * `-----------------------------------------------------------------------------------------------------------------------------'
+//      * ,---------------------------------------------------------------------------------------------------------------------------------.
+//      * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                               |
+//      * |                 |  F1 |  F2 |  F3 |  F4 |  F5|  F6|  F7|  F8|  F9| F10| F11| F12|                                               |
+//      * |---------------------------------------------------------------------------------------------------------------------------------|
+//      * |Copy|Pste|    | `  |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 |  0 |  - |  = | Bspc|   | INS|HOME|PGUP|   |NLCK| PSLS|PAST|PMNS|
+//      * |Cut |Caps|    |Tab |  Q |  W |  E |  R |  T |  Y |  U |  I |  O |  P |  [ | ]  |Enter|   | DEL| END|PGDN|   | P7 |  P8 |  P9|PPLS|
+//      * |BT< |BT>+|    |FN1 |  A |  S |  D |  F |  G |  H |  J |  K |  L |  ; |  ' | \    |            | UP |        | P4 |  P5 |  P6|  = |
+//      * |MC1 |App |    |Shft|  \ |  Z |  X |  C |  V |  B |  N |  M |  , |  . |  / | *  |Shift|   |LEFT|DOWN|RGHT|   | P1 |  P2 |  P3|PENT|
+//      * |Esc |GUI |    |Ctrl|    |Alt |            Space                 | Alt|    |Ctrl|              | FN |        | P0       |PDOT|  * |
+//      * `---------------------------------------------------------------------------------------------------------------------------------'
 //      */
-                              KC_PSCR, KC_SLCK, KC_PAUS,KC_NO,  KC_NO,  KC_MPRV,KC_MPLY,KC_MSTP,KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU,
-                              KC_F1,   KC_F2,   KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
+                              PSCR, SLCK, PAUS,NO,  NO,  MPRV,MPLY,MSTP,MNXT, MUTE, VOLD, VOLU,
+                              F1,   F2,   F3,  F4,  F5,  F6,  F7,  F8,  F9,   F10,  F11,  F12,
 
-  KC_COPY, KC_PASTE,  KC_ESC, KC_1,    KC_2,    KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,	KC_INS, KC_HOME, KC_PGUP,   KC_NLCK,KC_PSLS,KC_PAST, KC_PMNS,
-  KC_CUT,  KC_CAPS,   KC_TAB, KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,    KC_P,    KC_LBRC, KC_RBRC,	KC_ENT,   KC_DEL, KC_END,  KC_PGDN,   KC_P7,  KC_P8,  KC_P9,   KC_PPLS,
-  KC_NO,   KC_NO,     KC_NO,  KC_A,    KC_S,    KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,    KC_SCLN, KC_QUOT, KC_BSLS,	                  KC_UP,              KC_P4,  KC_P5,  KC_P6,   KC_EQL,
-  KC_NO,   KC_APP,    KC_LSFT,KC_BSLS, KC_Z,    KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,	          KC_LEFT,KC_DOWN, KC_RGHT,   KC_P1,  KC_P2,  KC_P3,   KC_PENT,
-  KC_ESC,  KC_LGUI,   KC_LCTL,         KC_LALT,                 KC_SPC,                 KC_RALT,                  KC_RCTL,	                          KC_NO,              KC_P0,          KC_PDOT
+  FN0  , ESC    , ESC  ,  1  ,  2  ,  3  ,  4  ,  5  ,  6  ,  7  ,  8  ,  9  ,  0  , MINS, EQL , BSPC  ,  INS , HOME, PGUP  ,    NLCK, PSLS, PAST, PMNS,
+  FN1  , CAPS   , TAB  ,  Q  ,  W  ,  E  ,  R  ,  T  ,  Y  ,  U  ,  I  ,  O  ,  P  , LBRC, RBRC, ENT   ,  DEL , END , PGDN  ,    P7  , P8  , P9  , PPLS,
+  FN2  , NO     , NO   ,  A  ,  S  ,  D  ,  F  ,  G  ,  H  ,  J  ,  K  ,  L  , SCLN, QUOT, BSLS,                UP  ,            P4  , P5  , P6  , EQL ,
+  FN3  , NO     , LSFT , BSLS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
+  FN4  , NO     , LCTL ,       LALT,             SPC ,                         RALT,             RCTL  ,         NO ,            P0        ,PDOT
 ),
 
 
-//         /* Keymap 1: Fn Layer
-// 	 * ,-----------------------------------------------------------------------------------------------------------------------------.
-//      * |                 |email|pwd1 |pwd2 |pwd3 |___ |___ |___ |___ |___ |___ |___ |___ |                                           |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |                 |___  |___  |___  |___  |___ |___ |___ |___ |___ |___ |___ |___ |                                           |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |___ |___ |   ___ |___|___|___|___|___|___|___|___|___|___|cmp1|___|  del  |   ___ |  ___ |  ___ |   ___ | ___ | ___ | ___ |  |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |___ |___ |    ___  |___|___|___|___|___|___|___|up |___|pgu|___|___|      |   ___ |  ___ |  ___ |   ___ | ___ | ___ | ___ |  |
-//      * |--------------------------------------------------------------------       --------------------------------------------------|
-//      * |___ |___ |   FN1   |___|___|___|___|___|___|lft|dn |rgt|pgd|___|___| ___  |	      | ___  |          ___ | ___ | ___ | ___ |  |
-//      * |-----------------------------------------------------------------------------------------------------------------------------|
-//      * |___ |___ |    ___  |___|___|___|___|___|___|___|___|cmp2|___|___| ______  |  ___  | ___  | ___  |   ___ | ___ | ___ | |___|  |
-//      * |----------------------------------------------------------------------------------------------------------------------|   |  |
-//      * |___ |___ |    ___ |    |___ |            comp3          |___ |     |___   |       | FN1  |           |    ___ | ___ | |   |  |
-//      * `-----------------------------------------------------------------------------------------------------------------------------'
-//      */
-// KEYMAP(
-//                         KC_NO,   KC_NO,   KC_NO,   KC_NO,   _______, _______, _______, _______, _______, _______, _______, _______,
-//                         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-
-//     _______, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, KC_NO,	_______, KC_DEL,    _______, _______, _______,   _______, _______, _______, _______,
-//     _______, _______,  _______, KC_WH_U, KC_BTN1, KC_MS_U, KC_BTN2, _______, _______, _______, KC_UP,   _______,  KC_PGUP, _______, _______,			_______, _______, _______,   _______, _______, _______, _______,
-//     _______, _______,  _______, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, _______, _______, _______,            _______,            _______, _______, _______, _______,
-//     _______, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_NO,    _______, _______, _______,			_______, _______, _______,   _______, _______, _______,
-//     _______, _______,  _______,          _______,                            KC_NO,                 	_______,					_______,                     _______,                     _______, _______, _______
-//     ),
  };
 
 const action_t  fn_actions[] = {
     [0]  = ACTION_LAYER_MOMENTARY(1),
+    [1]  = ACTION_LAYER_MOMENTARY(1),
+    [2]  = ACTION_LAYER_MOMENTARY(1),
+    [3]  = ACTION_LAYER_MOMENTARY(1),
+    [4]  = ACTION_LAYER_MOMENTARY(1),
 };
 
 
