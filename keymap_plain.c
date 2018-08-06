@@ -43,7 +43,7 @@ K7C,K7B, K7A,   K0A,  K0B,K7D,  K0C,                         K7P,        K0R,   
 {KC_##K3A ,KC_##K3B,KC_##K3C  ,KC_NO    ,KC_##K3E ,KC_##K3F ,KC_##K3G ,KC_##K3H,KC_##K3I,KC_##K3J,KC_##K3K,KC_##K3L,KC_##K3M  ,KC_##K3N  ,KC_##K3O,KC_##K3P  ,KC_##K3Q  ,KC_##K3R  ,KC_##K3S  ,KC_NO },\
 {KC_NO    ,KC_##K4B,KC_##K4C  ,KC_NO    ,KC_##K4E ,KC_NO    ,KC_NO    ,KC_##K4H,KC_##K4I,KC_##K4J,KC_##K4K,KC_##K4L,KC_##K4M  ,KC_NO,KC_##K4O,KC_##K4P  ,KC_##K4Q  ,KC_##K4R  ,KC_NO,KC_NO },\
 {KC_##K5A ,KC_##K5B,KC_NO     ,KC_NO    ,KC_##K5E ,KC_##K5F ,KC_##K5G ,KC_##K5H,KC_##K5I,KC_##K5J,KC_##K5K,KC_##K5L,KC_##K5M  ,KC_##K5N  ,KC_##K5O,KC_##K5P  ,KC_##K5Q  ,KC_##K5R  ,KC_##K5S  ,KC_NO },\
-{KC_##K6A ,KC_##K6B,KC_##K6C  ,KC_##K6D ,KC_##K6E ,KC_##K6F ,KC_NO    ,KC_##K6H,KC_##K6I,KC_##K6J,KC_##K6K,KC_##K6L,KC_##K6M  ,KC_##K6N  ,KC_##K6O,KC_##K6P  ,KC_##K6Q  ,KC_##K6R  ,KC_##K6S  ,KC_##K6T   },\
+{KC_##K6A ,KC_##K6B,KC_##K6C  ,KC_NO    ,KC_##K6D ,KC_##K6E ,KC_##K6F ,KC_##K6H,KC_##K6I,KC_##K6J,KC_##K6K,KC_##K6L,KC_##K6M  ,KC_##K6N  ,KC_##K6O,KC_##K6P  ,KC_##K6Q  ,KC_##K6R  ,KC_##K6S  ,KC_##K6T   },\
 {KC_##K7A ,KC_##K7B,KC_##K7C  ,KC_##K7D ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K7H,KC_##K7I,KC_##K7J,KC_##K7K,KC_##K7L,KC_NO,KC_NO,KC_##K7O,KC_##K7P  ,KC_##K7Q  ,KC_NO,KC_NO,KC_##K7T   }\
 },
 
