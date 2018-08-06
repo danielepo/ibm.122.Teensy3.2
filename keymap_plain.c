@@ -24,6 +24,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "debug.h"
 #include "keymap.h"
 
+#define ___ NO
+#define KC____ KC_NO
+
+
 #define KEYMAP( \
                    K709,K609,K60A,K509,K409,K40A,K309,K209,K20A,K009,K109,K10A,\
                    K70A,K70B,K60B,K50A,K50B,K40B,K30A,K30B,K20B,K00A,K00B,K10B,\
@@ -43,10 +47,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   {KC_##K700,KC_##K701,KC_##K702,KC_##K703,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K707,KC_##K708,KC_##K709,KC_##K70A,KC_##K70B,KC_NO    ,KC_NO    ,KC_##K70E,KC_##K70F,KC_##K710,KC_NO    ,KC_NO    ,KC_##K713}\
 }
 
-#define _______ KC_TRNS
 
 static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KEYMAP( \
+     /* Keymap 0: Default Layer
+     * ,---------------------------------------------------------------------------------------------------------------------------------.
+     * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                               |
+     * |                 |  F1 |  F2 |  F3 |  F4 |  F5|  F6|  F7|  F8|  F9| F10| F11| F12|                                               |
+     * |---------------------------------------------------------------------------------------------------------------------------------|
+     * |Copy|Pste|    | `  |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 |  0 |  - |  = | Bspc|   | INS|HOME|PGUP|   |NLCK| PSLS|PAST|PMNS|
+     * |Cut |Caps|    |Tab |  Q |  W |  E |  R |  T |  Y |  U |  I |  O |  P |  [ | ]  |Enter|   | DEL| END|PGDN|   | P7 |  P8 |  P9|PPLS|
+     * |BT< |BT>+|    |FN1 |  A |  S |  D |  F |  G |  H |  J |  K |  L |  ; |  ' | \    |            | UP |        | P4 |  P5 |  P6|  = |
+     * |MC1 |App |    |Shft|  \ |  Z |  X |  C |  V |  B |  N |  M |  , |  . |  / | *  |Shift|   |LEFT|DOWN|RGHT|   | P1 |  P2 |  P3|PENT|
+     * |Esc |GUI |    |Ctrl|    |Alt |            Space                 | Alt|    |Ctrl|              | FN |        | P0       |PDOT|  * |
+     * `---------------------------------------------------------------------------------------------------------------------------------'
+     */
+                              PSCR, SLCK, PAUS,NO,  NO,  MPRV,MPLY,MSTP,MNXT, MUTE, VOLD, VOLU,
+                              F1,   F2,   F3,  F4,  F5,  F6,  F7,  F8,  F9,   F10,  F11,  F12,
+
+  FN0 , ESC    , ESC  ,  1  ,  2  ,  3  ,  4  ,  5  ,  6  ,  7  ,  8  ,  9  ,  0  , MINS, EQL , BSPC  ,  INS , HOME, PGUP  ,    NLCK, PSLS, PAST, PMNS,
+  ___ , CAPS   , TAB  ,  Q  ,  W  ,  E  ,  R  ,  T  ,  Y  ,  U  ,  I  ,  O  ,  P  , LBRC, RBRC, ENT   ,  DEL , END , PGDN  ,    P7  , P8  , P9  , PPLS,
+  ___ , ___    , FN0  ,  A  ,  S  ,  D  ,  F  ,  G  ,  H  ,  J  ,  K  ,  L  , SCLN, QUOT, BSLS,                UP  ,           P4  , P5  , P6  , EQL ,
+  ___ , LGUI   , LSFT , BSLS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
+  ___ , RGUI   , LCTL ,       LALT,             SPC ,                         RALT,             RCTL  ,         NO ,            P0        ,PDOT
+),
+
+ KEYMAP( \
 //      /* Keymap 0: Default Layer
 //      * ,---------------------------------------------------------------------------------------------------------------------------------.
 //      * |                 |PrnSc|ScrLk|Pause|Lock |    | << |Play|Stop| >> |Mute|Vol-|Vol+|                                               |
@@ -59,25 +85,20 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //      * |Esc |GUI |    |Ctrl|    |Alt |            Space                 | Alt|    |Ctrl|              | FN |        | P0       |PDOT|  * |
 //      * `---------------------------------------------------------------------------------------------------------------------------------'
 //      */
-                              PSCR, SLCK, PAUS,NO,  NO,  MPRV,MPLY,MSTP,MNXT, MUTE, VOLD, VOLU,
-                              F1,   F2,   F3,  F4,  F5,  F6,  F7,  F8,  F9,   F10,  F11,  F12,
+                 ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ ,
+                 ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ ,
 
-  FN0  , ESC    , ESC  ,  1  ,  2  ,  3  ,  4  ,  5  ,  6  ,  7  ,  8  ,  9  ,  0  , MINS, EQL , BSPC  ,  INS , HOME, PGUP  ,    NLCK, PSLS, PAST, PMNS,
-  FN1  , CAPS   , TAB  ,  Q  ,  W  ,  E  ,  R  ,  T  ,  Y  ,  U  ,  I  ,  O  ,  P  , LBRC, RBRC, ENT   ,  DEL , END , PGDN  ,    P7  , P8  , P9  , PPLS,
-  FN2  , NO     , NO   ,  A  ,  S  ,  D  ,  F  ,  G  ,  H  ,  J  ,  K  ,  L  , SCLN, QUOT, BSLS,                UP  ,            P4  , P5  , P6  , EQL ,
-  FN3  , NO     , LSFT , BSLS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
-  FN4  , NO     , LCTL ,       LALT,             SPC ,                         RALT,             RCTL  ,         NO ,            P0        ,PDOT
+ ___ , ___   ,   ___ , F1  , F2  , F3  , F4  , F5  , F6  , F7  , F8  , F9  , F10 , F11 , F12 , ___   ,   ___ , ___ , ___  ,  ___ , ___ , ___ , ___ ,
+ ___ , ___   ,   ___ , ___ , ___ , ___ , ___ , ___ , ___ , PGUP, HOME, UP  , END , DEL , ___ , ___   ,   ___ , ___ , ___  ,  ___ , ___ , ___ , ___ ,
+ ___ , ___   ,   FN5 , LALT, ___ , LSFT, LCTL, ___ , ___ , PGDN, LEFT, DOWN, RGHT, BSPC, ___ ,                 ___        ,  ___ , ___ , ___ , ___ ,
+ ___ , ___   ,   ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ , ___ ,           ___ , ___ , ___  ,  ___ , ___ , ___ , ___ ,
+ ___ , ___   ,   ___ ,       ___ ,             ___ ,                         ___ ,       ___ ,                 ___ ,         ___ ,       ___
 ),
-
-
  };
 
 const action_t  fn_actions[] = {
-    [0]  = ACTION_LAYER_MOMENTARY(1),
-    [1]  = ACTION_LAYER_MOMENTARY(1),
-    [2]  = ACTION_LAYER_MOMENTARY(1),
-    [3]  = ACTION_LAYER_MOMENTARY(1),
-    [4]  = ACTION_LAYER_MOMENTARY(1),
+    [0]  = ACTION_LAYER_TOGGLE(1),
+    [5]  = ACTION_LAYER_TOGGLE(0),
 };
 
 
