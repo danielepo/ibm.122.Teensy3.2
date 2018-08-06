@@ -181,27 +181,15 @@ static void init_cols(void) {
 #define readRow(PARAMS1, PARAM2) readRowAsPowerOfTwo(PARAMS1, PARAM2)
 /* Returns status of switches(1:on, 0:off) */
 static matrix_row_t read_cols(void) {
-  return
-    readRow(KB_COL_01, 0) |
-    readRow(KB_COL_02, 1) |
-    readRow(KB_COL_03, 2) |
-    readRow(KB_COL_04, 3) |
-    readRow(KB_COL_05, 4) |
-    readRow(KB_COL_06, 5) |
-    readRow(KB_COL_07, 6) |
-    readRow(KB_COL_08, 7) |
-    readRow(KB_COL_09, 8) |
-    readRow(KB_COL_10, 9) |
-    readRow(KB_COL_11, 10) |
-    readRow(KB_COL_12, 11) |
-    readRow(KB_COL_13, 12) |
-    readRow(KB_COL_14, 13) |
-    readRow(KB_COL_15, 14) |
-    readRow(KB_COL_16, 15) |
-    readRow(KB_COL_17, 16) |
-    readRow(KB_COL_18, 17) |
-    readRow(KB_COL_19, 18) |
-    readRow(KB_COL_20, 19);
+  return readRow(KB_COL_01, 0) | readRow(KB_COL_02, 1) | readRow(KB_COL_03, 2) |
+         readRow(KB_COL_04, 3) | readRow(KB_COL_05, 4) | readRow(KB_COL_06, 5) |
+         readRow(KB_COL_07, 6) | readRow(KB_COL_08, 7) | readRow(KB_COL_09, 8) |
+         readRow(KB_COL_10, 9) | readRow(KB_COL_11, 10) |
+         readRow(KB_COL_12, 11) | readRow(KB_COL_13, 12) |
+         readRow(KB_COL_14, 13) | readRow(KB_COL_15, 14) |
+         readRow(KB_COL_16, 15) | readRow(KB_COL_17, 16) |
+         readRow(KB_COL_18, 17) | readRow(KB_COL_19, 18) |
+         readRow(KB_COL_20, 19);
 }
 #define KB_ROW_01 TEENSY_PIN14_IOPORT, TEENSY_PIN14
 #define KB_ROW_02 TEENSY_PIN15_IOPORT, TEENSY_PIN15
