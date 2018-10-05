@@ -171,7 +171,7 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // #define AC_TGL1     ACTION_LAYER_TOGGLE(1)
 const action_t  fn_actions[] = {
     [0]  = ACTION_LAYER_TOGGLE(0),
-    [1]  = ACTION_LAYER_TAP_TOGGLE(1),
+    [1]  = ACTION_LAYER_TAP_KEY(1,KC_CAPS),
     [2]  = ACTION_LAYER_TOGGLE(2),
     [3]  = ACTION_LAYER_TOGGLE(3),
     [4]  = ACTION_LAYER_TOGGLE(4),
