@@ -28,6 +28,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC____ KC_NO
 #define _T_ TRNS
 #define KC__T_ KC_TRNS
+#define NUSBS NONUS_BSLASH
+#define KC_NUSBS KC_NONUS_BSLASH
 
 #define KEYMAP( \
                 K7J,K6J,K6K,K5J,K4J,K4K,K3J,K2J,K2K,K1J,K0J,K0K,\
@@ -48,6 +50,7 @@ K7C,K7B, K7A,   K0A,  K0B,K7D,  K0C,                         K7P,        K0R,   
 {KC_##K7A ,KC_##K7B,KC_##K7C  ,KC_##K7D ,KC_NO    ,KC_NO    ,KC_NO    ,KC_##K7H,KC_##K7I,KC_##K7J,KC_##K7K,KC_##K7L,KC_NO,KC_NO,KC_##K7O,KC_##K7P  ,KC_##K7Q  ,KC_NO,KC_NO,KC_##K7T   }\
 },
 #define APP APPLICATION
+
 static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KEYMAP(
      /* Keymap 0: Default Layer
@@ -68,7 +71,7 @@ static const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   FN0 , ESC    , GRAVE,  1  ,  2  ,  3  ,  4  ,  5  ,  6  ,  7  ,  8  ,  9  ,  0  , MINS, EQL , BSPC  ,  INS , HOME, PGUP  ,    NLCK, PSLS, PAST, PMNS,
   FN1 , CAPS   , TAB  ,  Q  ,  W  ,  E  ,  R  ,  T  ,  Y  ,  U  ,  I  ,  O  ,  P  , LBRC, RBRC, ENT   ,  DEL , END , PGDN  ,    P7  , P8  , P9  , PPLS,
   FN2 , ___    , FN1  ,  A  ,  S  ,  D  ,  F  ,  G  ,  H  ,  J  ,  K  ,  L  , SCLN, QUOT, BSLS,                UP  ,            P4  , P5  , P6  , EQL ,
-  FN3 , APP    , LSFT , BSLS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
+  FN3 , APP    , LSFT ,NUSBS,  Z  ,  X  ,  C  ,  V  ,  B  ,  N  ,  M  , COMM, DOT , SLSH,       RSFT  ,  LEFT, DOWN, RGHT  ,    P1  , P2  , P3  , PENT,
   FN4 , RGUI   , LCTL ,       LALT,             SPC ,                         RALT,             RCTL  ,         NO ,            P0        ,PDOT
 )
 
